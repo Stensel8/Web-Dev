@@ -9,8 +9,5 @@ COPY ./webroot /usr/share/nginx/html
 # Expose port 80
 EXPOSE 80
 
-# Add a healthcheck to ensure Nginx is running properly
-HEALTHCHECK CMD curl -f http://localhost/ || exit 1
-
 # Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
